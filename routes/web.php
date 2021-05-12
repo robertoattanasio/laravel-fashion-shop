@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index'
 )->name('pagina-home');
 
-Route::get('/prodotti', 'HomeController@products')->name('pagina-prodotti');
+Route::get('/prodotti', 'HomeController@prodotti'
+)->name('pagina-prodotti');
