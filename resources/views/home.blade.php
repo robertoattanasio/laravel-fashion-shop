@@ -3,7 +3,6 @@
 @section('title', 'Home')
 
 @section('content')
-<h1>Laravel Fashion Shop</h1>
+    <div class="jumbotron"></div>
 
-    
 @endsection

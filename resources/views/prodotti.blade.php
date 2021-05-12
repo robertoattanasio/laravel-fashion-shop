@@ -3,33 +3,40 @@
 @section('title', 'Prodotti')
 
 @section('content')
-<h1>Prodotti</h1>
+    <div class="shoes-container">
+        @foreach ($scarpe as $item)
+            <div class="shoes-item">
 
-@foreach ($scarpe as $item)
+                @if ($item['link'] != '')
+                <img src="{{$item['link']}}" alt="">
+                @endif
 
-@if ($item['brand'] != '')
-    <h2>{{$item['brand']}}</h2>   
-@endif
+                <div class="shoes-info">
+                    @if ($item['brand'] != '')
+                        <h2>{{$item['brand']}}</h2>   
+                    @endif
+            
+                    @if ($item['model'] != '')
+                        <h5>{{$item['model']}}</h5>   
+                    @endif
+            
+                    @if ($item['type'] != '')
+                        <h5>{{$item['type']}}</h5>   
+                    @endif
+            
+                    @if ($item['color'] != '')
+                        <h5>{{$item['color']}}</h5>   
+                    @endif
+                </div>
 
-@if ($item['model'] != '')
-    <h5>{{$item['model']}}</h5>   
-@endif
-
-@if ($item['type'] != '')
-    <h5>{{$item['type']}}</h5>   
-@endif
-
-@if ($item['color'] != '')
-    <h5>{{$item['color']}}</h5>   
-@endif
-
-@if ($item['link'] != '')
-<img src="{{$item['link']}}" alt="">
-    <h5></h5>   
-@endif
+                <div class="overlay">
+                    
+                </div>
+            </div>
+        @endforeach
+    </div>
 
 
     
-@endforeach
     
 @endsection
